@@ -109,7 +109,7 @@ $('#cards').addEventListener('click', e => {
 /* ================= CERTIFICATES ================= */
 const certCat = c => c.cat;
 const fmtDate = d => { if (!d) return ''; const [y, m] = d.split('-'); return new Date(+y, +m - 1, 1).toLocaleString('en-GB', { month: 'long', year: 'numeric' }); };
-const certImg = (c, t) => 'certs/' + c.img + (t ? '-t' : '') + '.webp';
+const certImg = (c, t) => c.img + (t ? '-t' : '') + '.webp';
 const verLine = c => c.verify ? 'Online verification available' : (c.id || 'Certificate on file');
 function certCard(c) {
   const k = P.certs.indexOf(c), dt = fmtDate(c.date);
